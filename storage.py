@@ -1,15 +1,14 @@
 import json
 import random
 
-file = open("words.json")
 
-data = json.load(file)
 
-print(data)
+def load_data():
+    file = open("words.json")
+    data = json.load(file)
+    return data
+    
 
-for item in data:
-    print(item, ":", data[item])
-    print("".join(random.sample(item, len(item))))
 
 
 
